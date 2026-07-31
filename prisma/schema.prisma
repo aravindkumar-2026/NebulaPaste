@@ -7,22 +7,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum Visibility {
-  PUBLIC
-  UNLISTED
-}
-
 model Paste {
-  id          String      @id @default(cuid())
+  id          String   @id @default(cuid())
+
   title       String
   description String?
+
   content     String
   language    String
-  visibility  Visibility  @default(PUBLIC)
-  expiresAt   DateTime?
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
 
-  @@index([createdAt])
-  @@index([language])
+  pinned      Boolean  @default(false)
+
+  userId      String
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
