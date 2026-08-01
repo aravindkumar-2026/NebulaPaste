@@ -3,6 +3,8 @@ import FeatureCards from "@/components/home/FeatureCards";
 import RecentPastes from "@/components/home/RecentPastes";
 import Reveal from "@/components/ui/Reveal";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <>
