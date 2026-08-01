@@ -12,15 +12,46 @@ type EditorFormProps = {
 };
 
 const languages = [
-  "javascript",
-  "typescript",
-  "python",
-  "java",
-  "cpp",
-  "c",
-  "html",
-  "css",
-  "json",
+  {
+    value: "plaintext",
+    label: "Plain Text",
+  },
+  {
+    value: "javascript",
+    label: "JavaScript",
+  },
+  {
+    value: "typescript",
+    label: "TypeScript",
+  },
+  {
+    value: "python",
+    label: "Python",
+  },
+  {
+    value: "java",
+    label: "Java",
+  },
+  {
+    value: "cpp",
+    label: "C++",
+  },
+  {
+    value: "c",
+    label: "C",
+  },
+  {
+    value: "html",
+    label: "HTML",
+  },
+  {
+    value: "css",
+    label: "CSS",
+  },
+  {
+    value: "json",
+    label: "JSON",
+  },
 ];
 
 export default function EditorForm({
@@ -79,8 +110,11 @@ export default function EditorForm({
             className="rounded-2xl border border-zinc-700 bg-zinc-950 px-5 py-4 text-white outline-none focus:border-cyan-400"
           >
             {languages.map((lang) => (
-              <option key={lang} value={lang}>
-                {lang.toUpperCase()}
+              <option
+                key={lang.value}
+                value={lang.value}
+              >
+                {lang.label}
               </option>
             ))}
           </select>

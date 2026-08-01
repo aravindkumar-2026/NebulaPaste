@@ -36,6 +36,11 @@ export default async function PastePage({
 
   const isOwner = paste.userId === userId;
 
+  const language =
+    paste.language.toLowerCase() === "plaintext"
+      ? "text"
+      : paste.language.toLowerCase();
+
   return (
     <Section className="relative overflow-hidden">
 
@@ -75,13 +80,15 @@ export default async function PastePage({
             <div className="h-3 w-3 rounded-full bg-green-500" />
 
             <span className="ml-4 text-sm text-zinc-500">
-              {paste.language}
+              {paste.language === "plaintext"
+                ? "Plain Text"
+                : paste.language}
             </span>
 
           </div>
 
           <SyntaxHighlighter
-            language={paste.language.toLowerCase()}
+            language={language}
             style={oneDark}
             showLineNumbers
             customStyle={{
