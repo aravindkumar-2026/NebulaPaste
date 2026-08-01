@@ -2,63 +2,206 @@
 
 <div align="center">
 
-### A Modern Full-Stack Code Sharing Platform
+<img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" />
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" />
+<img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript" />
+<img src="https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma" />
+<img src="https://img.shields.io/badge/PostgreSQL-Neon-336791?style=for-the-badge&logo=postgresql" />
+<img src="https://img.shields.io/badge/Authentication-Clerk-6C47FF?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker" />
+<img src="https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel" />
 
-Create, manage, search, pin, and securely share code snippets with authentication, syntax highlighting, and a modern developer experience.
+<br><br>
 
----
+# 🌌 Modern Full Stack Code Sharing Platform
 
-![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
-![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-336791?style=for-the-badge&logo=postgresql)
-![Clerk](https://img.shields.io/badge/Authentication-Clerk-6C47FF?style=for-the-badge)
-![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker)
+Create, organize, edit, search and securely manage your personal code snippets with authentication, syntax highlighting, Monaco Editor and a production-ready developer experience.
+
+### 🔗 Live Demo
+
+https://nebula-paste-rose.vercel.app
+
+### 💻 GitHub Repository
+
+https://github.com/aravindkumar-2026/NebulaPaste
 
 </div>
 
 ---
 
-## 📌 Overview
+# 📌 Overview
 
-NebulaPaste is a modern PasteBin-inspired application built using **Next.js 16**, **TypeScript**, **Prisma ORM**, **Neon PostgreSQL**, and **Clerk Authentication**.
+NebulaPaste is a modern full-stack code snippet manager inspired by Pastebin and GitHub Gists.
 
-It provides a clean and secure platform for developers to create, organize, edit, search, and share code snippets while demonstrating production-ready full-stack development practices.
+Unlike traditional public paste platforms, NebulaPaste provides **private user workspaces**, ensuring that every authenticated user can only access their own snippets.
+
+The project demonstrates production-level Full Stack development using:
+
+- Next.js 16
+- React 19
+- TypeScript
+- Prisma ORM
+- Neon PostgreSQL
+- Clerk Authentication
+- Monaco Editor
+- Docker
+- Vercel Deployment
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-- 🔐 Clerk Authentication
-- 📝 Create, Edit & Delete Pastes
-- 📌 Pin / Unpin Pastes
-- 🔍 Instant Search
-- 📋 One-click Copy
-- 📤 Share Links
-- 💾 Download Snippets
-- 🎨 Syntax Highlighting
-- 👤 Personal Dashboard
-- 🔒 Owner-only Edit/Delete Protection
-- ❤️ Health Check API
-- 🐳 Docker Ready
-- 📱 Responsive UI
+## 🔐 Authentication
+
+- Secure Clerk Authentication
+- Google Sign In
+- Google Sign Up
+- Protected API Routes
+- Secure Session Management
+
 ---
 
+## 📝 Paste Management
+
+- Create Paste
+- Edit Paste
+- Delete Paste
+- Pin / Unpin Paste
+- Download Paste
+- Copy Code
+- Share Links
+- Search Snippets
+- Plain Text Support
+- Syntax Highlighting
+
+---
+
+## 👤 Personal Workspace
+
+Every user has their own private dashboard.
+
+✔ Dashboard only displays your own snippets
+
+✔ Other users cannot access your snippets
+
+✔ Secure ownership verification
+
+✔ Personal statistics
+
+✔ Recent snippets section
+
+---
+
+# 👤 User Account Management
+
+NebulaPaste provides a modern account management system powered by Clerk.
+
+## Animated Profile Button
+
+The navigation bar contains an animated profile avatar.
+
+✨ Hover Effects
+
+- Smooth glowing animation
+- Modern hover transition
+- Interactive profile menu
+
+---
+
+## Manage Account
+
+Users can easily manage their account without leaving the application.
+
+Features include:
+
+- 📷 Update Profile Picture
+- ✏️ Update Name
+- 📧 View Connected Email
+- 🔗 View Connected Google Account
+- 🌍 Connected Identity Information
+
+---
+
+## 🔐 Security Center
+
+Users have complete control over their account security.
+
+Available features:
+
+- Create Password
+- Update Password
+- Manage Login Credentials
+- View Active Devices
+- View Active Sessions
+- Browser Information
+- Device Information
+- Login History
+- Delete Account
+
+---
+
+# 🔒 Privacy
+
+Unlike public paste websites,
+
+NebulaPaste provides a private workspace.
+
+Every signed-in user can only:
+
+- View their own snippets
+- Edit their own snippets
+- Delete their own snippets
+- Pin their own snippets
+
+No user can view another user's snippets.
+
+---
+
+# 🎨 Code Editor
+
+NebulaPaste uses the Monaco Editor (Visual Studio Code editor).
+
+Features:
+
+- IntelliSense Ready
+- Syntax Highlighting
+- Automatic Layout
+- Word Wrap
+- Smooth Scrolling
+- Multiple Programming Languages
+- Plain Text Support
+
+Supported Languages:
+
+- Plain Text
+- JavaScript
+- TypeScript
+- Python
+- Java
+- C
+- C++
+- HTML
+- CSS
+- JSON
+
+---
 # 🛠️ Tech Stack
 
 | Category | Technology |
 |----------|------------|
-| Frontend | Next.js 16, React, TypeScript |
+| Frontend | Next.js 16, React 19, TypeScript |
 | Styling | Tailwind CSS |
 | Backend | Next.js API Routes |
-| ORM | Prisma |
+| ORM | Prisma ORM |
 | Database | Neon PostgreSQL |
 | Authentication | Clerk |
+| Editor | Monaco Editor |
 | Syntax Highlighting | react-syntax-highlighter |
-| Code Editor | Monaco Editor |
 | Icons | Lucide React |
+| Notifications | Sonner |
 | Deployment | Vercel |
 | Containerization | Docker |
+| Version Control | Git & GitHub |
 
 ---
 
@@ -67,25 +210,36 @@ It provides a clean and secure platform for developers to create, organize, edit
 ```text
 NebulaPaste
 │
-├── app/
-│   ├── api/
-│   ├── create/
-│   ├── edit/
-│   ├── my-pastes/
-│   ├── paste/
-│   └── search/
+├── app
+│   ├── api
+│   ├── create
+│   ├── edit
+│   ├── my-pastes
+│   ├── paste
+│   ├── sign-in
+│   ├── sign-up
+│   └── page.tsx
 │
-├── components/
-│   ├── layout/
-│   ├── paste/
-│   └── ui/
+├── components
+│   ├── editor
+│   ├── home
+│   ├── layout
+│   ├── paste
+│   └── ui
 │
-├── lib/
-├── prisma/
-├── public/
+├── lib
+│   ├── prisma.ts
+│   └── logger.ts
+│
+├── prisma
+│   └── schema.prisma
+│
+├── public
 │
 ├── Dockerfile
 ├── docker-compose.yml
+├── middleware.ts
+├── next.config.ts
 ├── package.json
 └── README.md
 ```
@@ -94,11 +248,13 @@ NebulaPaste
 
 # 🚀 Getting Started
 
-## Clone the Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/aravindkumar-2026/NebulaPaste.git
 ```
+
+Move inside the project.
 
 ```bash
 cd NebulaPaste
@@ -114,37 +270,41 @@ npm install
 
 ---
 
-## Environment Variables
+# ⚙️ Environment Variables
 
-Create a file named:
+Create a file named
 
 ```text
 .env.local
 ```
 
-Add the following variables:
+Add:
 
 ```env
 DATABASE_URL=
 
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+
 CLERK_SECRET_KEY=
 
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+NEXT_PUBLIC_APP_URL=https://nebula-paste-rose.vercel.app
 ```
 
 ---
 
-## Generate Prisma Client
+# 🗄️ Prisma
+
+Generate Prisma Client
 
 ```bash
 npx prisma generate
 ```
 
----
-
-## Push Database
+Push the schema
 
 ```bash
 npx prisma db push
@@ -152,28 +312,65 @@ npx prisma db push
 
 ---
 
-## Run Development Server
+# ▶️ Run Development Server
 
 ```bash
 npm run dev
 ```
 
-Open:
+Open
 
 ```
 http://localhost:3000
 ```
+
+---
+
+# 🐳 Docker
+
+Build Docker Image
+
+```bash
+docker compose build
+```
+
+Run Container
+
+```bash
+docker compose up
+```
+
+Application will be available at
+
+```
+http://localhost:3000
+```
+
+---
+
+# ☁️ Deployment
+
+NebulaPaste is deployed on
+
+- Vercel
+- Neon PostgreSQL
+- Clerk Authentication
+
+Deployment is automatically triggered whenever changes are pushed to GitHub.
+
 ---
 
 # 📡 API Documentation
 
 ## Health Check
 
-### GET `/api/health`
+### GET
 
-Returns the current status of the application.
+```
+/api/health
+```
 
-### Response
+Response
 
 ```json
 {
@@ -187,137 +384,239 @@ Returns the current status of the application.
 
 ## Create Paste
 
-### POST `/api/pastes`
+### POST
 
-Creates a new paste for the authenticated user.
-
-### Request Body
-
-```json
-{
-  "title": "My Code",
-  "description": "Sample description",
-  "content": "console.log('Hello');",
-  "language": "JavaScript"
-}
+```
+/api/pastes
 ```
 
----
-
-## Get All Pastes
-
-### GET `/api/pastes`
-
-Returns all available pastes.
-
----
-
-## Get Single Paste
-
-### GET `/api/pastes/:id`
-
-Returns a specific paste by ID.
+Creates a new snippet for the authenticated user.
 
 ---
 
 ## Update Paste
 
-### PATCH `/api/pastes/:id`
+### PUT
 
-Updates an existing paste.
+```
+/api/pastes/:id
+```
+
+Updates an existing snippet.
+
+Only the owner can update.
 
 ---
 
 ## Delete Paste
 
-### DELETE `/api/pastes/:id`
+### DELETE
 
-Deletes a paste.
+```
+/api/pastes/:id
+```
 
-> 🔒 Only the owner of the paste can delete it.
+Deletes an existing snippet.
+
+Only the owner can delete.
 
 ---
 
-## Pin / Unpin Paste
+## Security
 
-### PATCH `/api/pastes/:id/pin`
+Every request validates:
 
-Pins or unpins a paste.
+- Authentication
+- User Ownership
+- Database Access
+- Error Handling
 
-> 🔒 Only the owner of the paste can pin or unpin it.
+Unauthorized requests return appropriate HTTP status codes.
 
 ---
-
-# 🔒 Authentication
-
-NebulaPaste uses **Clerk Authentication**.
-
-Protected features include:
-
-- Create Paste
-- Edit Paste
-- Delete Paste
-- Pin / Unpin
-- My Dashboard
-
-Unauthenticated users can browse public content but cannot modify data.
----
-
-# 🐳 Docker
-
-Build the Docker image:
-
-```bash
-docker compose build
-```
-
-Run the application:
-
-```bash
-docker compose up
-```
-
-The application will be available at:
-
-```
-http://localhost:3000
-```
----
-
 # 🏗️ System Architecture
 
 ```text
-                 User
-                   │
-                   ▼
-          Next.js Frontend
-                   │
-                   ▼
-            API Routes (REST)
-                   │
-        ┌──────────┴──────────┐
-        ▼                     ▼
-   Clerk Authentication   Prisma ORM
-                                  │
-                                  ▼
-                        Neon PostgreSQL
+                     User
+                       │
+                       ▼
+          Clerk Authentication
+                       │
+                       ▼
+             Next.js Frontend
+                       │
+                       ▼
+              API Routes (REST)
+                       │
+         ┌─────────────┴─────────────┐
+         ▼                           ▼
+   Authorization                 Prisma ORM
+                                         │
+                                         ▼
+                                 Neon PostgreSQL
 ```
+
+---
+
+# 📸 Screenshots
+
+You can add screenshots here.
+
+## 🏠 Home Page
+
+> Add a screenshot of the landing page.
+
+---
+
+## ✨ Create Paste
+
+> Add a screenshot of the Monaco Editor.
+
+---
+
+## 📋 Dashboard
+
+> Add a screenshot of Dashboard statistics and Recent Pastes.
+
+---
+
+## 👤 Profile Management
+
+> Add a screenshot of the profile menu.
+
+Features:
+
+- Animated Profile Avatar
+- Manage Account
+- Update Profile
+- Connected Email
+- Connected Google Account
+
+---
+
+## 🔐 Security
+
+> Add a screenshot of the Security page.
+
+Features:
+
+- Password Management
+- Active Devices
+- Session Management
+- Delete Account
+
+---
+
+# 📱 Responsive Design
+
+NebulaPaste is fully responsive.
+
+Supports:
+
+- 💻 Desktop
+- 💼 Laptop
+- 📱 Mobile Phones
+- 📟 Tablets
+
+The layout automatically adapts for different screen sizes while maintaining a modern user experience.
+
+---
+
+# ⚡ Performance
+
+NebulaPaste is optimized for speed.
+
+Highlights:
+
+- Server Components
+- Fast API Routes
+- Prisma ORM
+- Efficient Database Queries
+- Automatic Code Splitting
+- Optimized Assets
+- Vercel Edge Deployment
+
+---
+
+# 🔒 Security
+
+Security was considered throughout development.
+
+Features include:
+
+- Clerk Authentication
+- Protected Routes
+- Owner-only Edit/Delete
+- Secure API Validation
+- Database Authorization
+- Session Management
+- Account Security Dashboard
+
 ---
 
 # 🚀 Future Improvements
 
-- 🌍 Public & Private Pastes
+Future features planned for NebulaPaste:
+
+- 🌍 Public & Private Paste Toggle
 - 🤖 AI Code Explanation
 - ▶️ Online Code Execution
 - 📁 Collections & Folders
-- 🌙 Dark / Light Theme
-- 📈 User Analytics Dashboard
-- 📱 Progressive Web App (PWA)
-- 🔔 Notifications
+- 🏷️ Tags & Categories
 - ⭐ Favorites
-- 📤 Export as PDF
+- 📊 Analytics Dashboard
+- 🌙 Dark / Light Theme
+- 🔔 Notifications
+- 📄 Export to PDF
+- 📱 Progressive Web App (PWA)
+- 🔍 Advanced Search Filters
+- 📤 Share with Expiration Links
+- 📌 Folder Organization
+
+---
+
+# 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+If you'd like to improve NebulaPaste:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push the branch.
+5. Open a Pull Request.
+
+---
+
+# 👨‍💻 Author
+
+**A. Aravind Kumar**
+
+Information Technology
+
+Rajalakshmi Engineering College
+
+GitHub:
+
+https://github.com/aravindkumar-2026
+
 ---
 
 # 📄 License
 
-This project was developed as part of a **Full Stack & DevOps Challenge** for learning and evaluation purposes.
+This project was developed as part of a **Full Stack & DevOps Technical Club Recruitment Project**.
+
+It is intended for educational, portfolio, and learning purposes.
+
+---
+
+<div align="center">
+
+## ⭐ If you like this project, consider giving it a star!
+
+### Thank you for visiting NebulaPaste 🚀
+
+Made with ❤️ using Next.js, TypeScript, Prisma, Neon PostgreSQL, Clerk Authentication, Docker and Vercel.
+
+</div>
