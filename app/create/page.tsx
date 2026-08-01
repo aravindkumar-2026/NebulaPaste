@@ -15,17 +15,17 @@ export default function CreatePage() {
 
       <Container>
 
-        <div className="grid gap-12 lg:grid-cols-[340px_1fr]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[340px_1fr]">
 
           {/* Sidebar */}
 
-          <div className="sticky top-24 h-fit rounded-3xl border border-zinc-800 bg-zinc-900/60 p-8 backdrop-blur-xl">
+          <div className="h-fit rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6 backdrop-blur-xl lg:sticky lg:top-24 lg:p-8">
 
             <div className="mb-6 flex items-center gap-3">
 
               <Sparkles className="text-cyan-400" />
 
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-white lg:text-3xl">
                 New Paste
               </h2>
 
@@ -67,7 +67,7 @@ export default function CreatePage() {
 
           {/* Editor */}
 
-          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6 backdrop-blur-xl">
+          <div className="rounded-3xl border border-zinc-800 bg-zinc-900/60 p-4 backdrop-blur-xl sm:p-6">
 
             <CodeEditor />
 

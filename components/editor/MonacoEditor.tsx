@@ -21,9 +21,7 @@ export default function MonacoEditor({
       <div className="flex items-center gap-2 border-b border-zinc-800 bg-zinc-900 px-5 py-4">
 
         <div className="h-3 w-3 rounded-full bg-red-500" />
-
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
-
         <div className="h-3 w-3 rounded-full bg-green-500" />
 
         <span className="ml-4 text-sm text-zinc-500">
@@ -34,39 +32,41 @@ export default function MonacoEditor({
 
       {/* Monaco */}
 
-      <Editor
-        height="650px"
-        theme="vs-dark"
-        language={language}
-        value={code}
-        onChange={(value) => onChange(value || "")}
-        options={{
-          minimap: {
-            enabled: false,
-          },
+      <div className="h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px]">
+        <Editor
+          height="100%"
+          theme="vs-dark"
+          language={language}
+          value={code}
+          onChange={(value) => onChange(value || "")}
+          options={{
+            minimap: {
+              enabled: false,
+            },
 
-          fontSize: 16,
+            fontSize: 15,
 
-          automaticLayout: true,
+            automaticLayout: true,
 
-          wordWrap: "on",
+            wordWrap: "on",
 
-          scrollBeyondLastLine: false,
+            scrollBeyondLastLine: false,
 
-          padding: {
-            top: 20,
-            bottom: 20,
-          },
+            padding: {
+              top: 20,
+              bottom: 20,
+            },
 
-          smoothScrolling: true,
+            smoothScrolling: true,
 
-          cursorBlinking: "smooth",
+            cursorBlinking: "smooth",
 
-          cursorSmoothCaretAnimation: "on",
+            cursorSmoothCaretAnimation: "on",
 
-          roundedSelection: true,
-        }}
-      />
+            roundedSelection: true,
+          }}
+        />
+      </div>
 
     </div>
   );
