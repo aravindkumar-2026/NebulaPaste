@@ -6,7 +6,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import Link from "next/link";
+import { auth } from "@clerk/nextjs/server";
 import { prisma } from "@/lib/prisma";
 
 import Container from "@/components/ui/Container";
@@ -16,7 +16,25 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import SearchPastes from "./SearchPastes";
 
 export default async function RecentPastes() {
+  const { userId } = await auth();
+
+  if (!userId) {
+    return (
+      <Section>
+        <Container>
+          <SectionTitle
+            title="Dashboard"
+            subtitle="Sign in to view your personal pastes."
+          />
+        </Container>
+      </Section>
+    );
+  }
+
   const pastes = await prisma.paste.findMany({
+    where: {
+      userId,
+    },
     orderBy: {
       createdAt: "desc",
     },
@@ -24,7 +42,9 @@ export default async function RecentPastes() {
   });
 
   const totalPastes = pastes.length;
+
   const pinned = pastes.filter((p) => p.pinned).length;
+
   const languages = new Set(
     pastes.map((p) => p.language)
   ).size;
@@ -71,7 +91,6 @@ export default async function RecentPastes() {
   return (
     <>
       <Section>
-
         <Container>
 
           <SectionTitle
@@ -116,11 +135,9 @@ export default async function RecentPastes() {
           </div>
 
         </Container>
-
       </Section>
 
       <Section>
-
         <Container>
 
           <SectionTitle
@@ -133,7 +150,6 @@ export default async function RecentPastes() {
           </div>
 
         </Container>
-
       </Section>
     </>
   );
