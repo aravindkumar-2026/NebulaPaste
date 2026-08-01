@@ -4,10 +4,18 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
+type Paste = {
+  id: string;
+  title: string;
+  description: string | null;
+  content: string;
+  language: string;
+};
+
 export default function EditForm({
   paste,
 }: {
-  paste: any;
+  paste: Paste;
 }) {
   const router = useRouter();
 
@@ -76,7 +84,7 @@ export default function EditForm({
 
       <button
         onClick={savePaste}
-        className="rounded-lg bg-cyan-500 px-6 py-3 font-bold text-black hover:bg-cyan-400 transition"
+        className="rounded-lg bg-cyan-500 px-6 py-3 font-bold text-black transition hover:bg-cyan-400"
       >
         Save Changes
       </button>

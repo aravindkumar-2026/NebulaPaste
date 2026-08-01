@@ -34,7 +34,7 @@ export default async function SearchPage({
       <p className="mb-10 text-zinc-400">
         Showing results for:
         <span className="ml-2 font-semibold text-cyan-400">
-          "{q}"
+          &quot;{q}&quot;
         </span>
       </p>
 
@@ -49,7 +49,7 @@ export default async function SearchPage({
             <Link
               key={paste.id}
               href={`/paste/${paste.id}`}
-              className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition hover:border-cyan-500 hover:-translate-y-1"
+              className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition hover:-translate-y-1 hover:border-cyan-500"
             >
               <h2 className="mb-4 text-2xl font-bold text-white">
                 {paste.title}
