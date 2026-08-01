@@ -1,6 +1,7 @@
 "use client";
 
 import { Download } from "lucide-react";
+import { toast } from "sonner";
 
 type DownloadButtonProps = {
   title: string;
@@ -39,30 +40,42 @@ export default function DownloadButton({
   }
 
   function downloadPaste() {
-    const blob = new Blob([content], {
-      type: "text/plain;charset=utf-8",
-    });
+    try {
+      const blob = new Blob([content], {
+        type: "text/plain;charset=utf-8",
+      });
 
-    const url = URL.createObjectURL(blob);
+      const url = URL.createObjectURL(blob);
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `${title || "paste"}.${getExtension(language)}`;
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${title || "paste"}.${getExtension(language)}`;
 
-    document.body.appendChild(a);
-    a.click();
+      document.body.appendChild(a);
+      a.click();
 
-    document.body.removeChild(a);
+      document.body.removeChild(a);
 
-    URL.revokeObjectURL(url);
+      URL.revokeObjectURL(url);
+
+      toast.success("Download started!", {
+        description: "Your browser has started downloading the snippet.",
+      });
+    } catch (error) {
+      console.error(error);
+
+      toast.error("Download failed", {
+        description: "Please try again.",
+      });
+    }
   }
 
   return (
     <button
       onClick={downloadPaste}
-      className="rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-500"
+      className="flex items-center rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-500"
     >
-      <Download className="mr-2 inline h-4 w-4" />
+      <Download className="mr-2 h-4 w-4" />
       Download
     </button>
   );

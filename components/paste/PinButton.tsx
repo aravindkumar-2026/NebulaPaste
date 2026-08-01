@@ -3,14 +3,19 @@
 import { useState } from "react";
 import { Pin } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 type Props = {
   id: string;
   pinned: boolean;
 };
 
-export default function PinButton({ id, pinned }: Props) {
+export default function PinButton({
+  id,
+  pinned,
+}: Props) {
   const router = useRouter();
+
   const [loading, setLoading] = useState(false);
 
   async function togglePin() {
@@ -22,14 +27,28 @@ export default function PinButton({ id, pinned }: Props) {
       });
 
       if (!res.ok) {
-        alert("Failed to update pin.");
-        return;
+        throw new Error();
       }
 
-      router.refresh();
+      toast.success(
+        pinned ? "Paste unpinned!" : "Paste pinned!",
+        {
+          description: pinned
+            ? "The paste has been removed from your pinned list."
+            : "It will now appear at the top of your dashboard.",
+        }
+      );
+
+      setTimeout(() => {
+        router.refresh();
+      }, 500);
+
     } catch (error) {
       console.error(error);
-      alert("Something went wrong.");
+
+      toast.error("Update failed", {
+        description: "Please try again.",
+      });
     } finally {
       setLoading(false);
     }
@@ -46,6 +65,7 @@ export default function PinButton({ id, pinned }: Props) {
       }`}
     >
       <Pin className="mr-2 inline h-4 w-4" />
+
       {loading ? "Updating..." : pinned ? "Unpin" : "Pin"}
     </button>
   );

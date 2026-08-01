@@ -28,7 +28,10 @@ export default function RootLayout({
 
           <Footer />
 
-          <Toaster richColors position="top-right" />
+          <Toaster
+            richColors
+            position="top-right"
+          />
 
         </body>
       </html>

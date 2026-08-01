@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export default function EditForm({
   paste,
@@ -11,25 +12,44 @@ export default function EditForm({
   const router = useRouter();
 
   const [title, setTitle] = useState(paste.title);
-  const [description, setDescription] = useState(paste.description || "");
+  const [description, setDescription] = useState(
+    paste.description || ""
+  );
   const [content, setContent] = useState(paste.content);
 
   async function savePaste() {
-    await fetch(`/api/pastes/${paste.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title,
-        description,
-        content,
-        language: paste.language,
-      }),
-    });
+    try {
+      const res = await fetch(`/api/pastes/${paste.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title,
+          description,
+          content,
+          language: paste.language,
+        }),
+      });
 
-    router.push(`/paste/${paste.id}`);
-    router.refresh();
+      if (!res.ok) {
+        throw new Error();
+      }
+
+      toast.success("Changes saved!", {
+        description: "Your paste has been updated successfully.",
+      });
+
+      setTimeout(() => {
+        router.push(`/paste/${paste.id}`);
+        router.refresh();
+      }, 700);
+
+    } catch {
+      toast.error("Failed to save changes.", {
+        description: "Please try again.",
+      });
+    }
   }
 
   return (
@@ -56,7 +76,7 @@ export default function EditForm({
 
       <button
         onClick={savePaste}
-        className="rounded-lg bg-cyan-500 px-6 py-3 font-bold text-black"
+        className="rounded-lg bg-cyan-500 px-6 py-3 font-bold text-black hover:bg-cyan-400 transition"
       >
         Save Changes
       </button>
