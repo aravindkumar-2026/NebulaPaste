@@ -471,8 +471,6 @@ Features:
 
 ## 🔐 Security
 
-> Add a screenshot of the Security page.
-
 Features:
 
 - Password Management
