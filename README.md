@@ -455,34 +455,9 @@ Unauthorized requests return appropriate HTTP status codes.
                                          ▼
                                  Neon PostgreSQL
 ```
-
----
-
-# 📸 Screenshots
-
-You can add screenshots here.
-
-## 🏠 Home Page
-
-> Add a screenshot of the landing page.
-
----
-
-## ✨ Create Paste
-
-> Add a screenshot of the Monaco Editor.
-
----
-
-## 📋 Dashboard
-
-> Add a screenshot of Dashboard statistics and Recent Pastes.
-
 ---
 
 ## 👤 Profile Management
-
-> Add a screenshot of the profile menu.
 
 Features:
 
